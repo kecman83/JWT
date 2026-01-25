@@ -32,7 +32,9 @@
             <td th:text="${student.id}"></td>
             <td th:text="${student.name}"></td>
             <td th:text="${student.plz}"></td>
-            <td>Aktion offen</td>
+            <td><a th:href="@{/web/v1/studenten/update/{id}(id=${student.id})}" class="btn btn-info" role="button">bearbeiten</a>
+                <a th:href="@{/web/v1/studenten/delete/{id}(id=${student.id})}" class="btn btn-warning" role="button">loeschen</a>
+            </td>
         </tr>
     </tbody>
 
